@@ -1,5 +1,4 @@
 ﻿using backend.Models;
-using backend.Utils;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -108,10 +107,10 @@ namespace backend.Services
                         var message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                         Console.WriteLine($"Received: {message}");
 
-                        Request? request;
+                        TcpRequest? request;
                         try
                         {
-                            request = JsonSerializer.Deserialize<Request>(message);
+                            request = JsonSerializer.Deserialize<TcpRequest>(message);
                         }
                         catch (JsonException)
                         {

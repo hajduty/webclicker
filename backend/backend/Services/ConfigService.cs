@@ -1,5 +1,4 @@
 ﻿using backend.Models;
-using backend.Utils;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Reflection;

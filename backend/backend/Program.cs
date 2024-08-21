@@ -12,7 +12,6 @@ using System.Configuration;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
 var key = Encoding.ASCII.GetBytes("maG>o)pNwcQ[GM?~)!G.@a)`x;HHH(999"); // Replace with your actual secret key
 var tcpHost = "0.0.0.0";
 int tcpPort = int.TryParse(Environment.GetEnvironmentVariable("TCP_PORT"), out int result) ? result : 4402;
@@ -55,7 +54,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Configure the HTTP request pipeline.
-if (false)
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();

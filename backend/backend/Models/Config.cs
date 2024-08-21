@@ -1,5 +1,4 @@
-﻿using backend.Utils;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace backend.Models
 {
@@ -11,7 +10,6 @@ namespace backend.Models
         public int rightJitter { get; set; }
         public int rightclickerCps { get; set; } = 13;
         public int rightclickerBind { get; set; } = 0;
-
         public bool leftclickerEnabled { get; set; }
         public int leftJitter { get; set; }
         public int leftclickerBind { get; set; } = 0;

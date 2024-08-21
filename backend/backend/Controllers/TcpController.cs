@@ -1,7 +1,6 @@
 ﻿using backend.Models;
 using backend.Services;
 using backend.Services.TcpServerApi.Services;
-using backend.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;

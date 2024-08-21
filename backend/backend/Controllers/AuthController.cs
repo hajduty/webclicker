@@ -1,6 +1,5 @@
 ﻿using backend.Models;
 using backend.Services;
-using backend.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -85,11 +84,11 @@ namespace backend.Controllers
 
                 if (request._value is JsonElement jsonElement && jsonElement.ValueKind == JsonValueKind.String)
                 {
-                    hwidValue = jsonElement.GetString();
+                    hwidValue = jsonElement.GetString()!;
                 }
                 else
                 {
-                    hwidValue = request._value.ToString();
+                    hwidValue = request._value.ToString()!;
                 }
 
                 var user = UpdateUserHwid(email, hwidValue);
@@ -132,6 +131,7 @@ namespace backend.Controllers
             {
                 return null;
             }
+
             user.Hwid = value;
             _context.Users.Update(user);
             _context.SaveChanges();
@@ -139,11 +139,5 @@ namespace backend.Controllers
 
             return user;
         }
-    }
-
-    public class LoginRequest
-    {
-        public string Email { get; set; }
-        public string Password { get; set; }
     }
 }
