@@ -7,3 +7,8 @@
 /clicker/x64
 /backend/obj
 /backend/backend/obj
+/backend/.vs/backend/
+/.vs
+/backend/backend/sample.db
+/backend/backend/sample.db-shm
+/backend/backend/sample.db-wal
